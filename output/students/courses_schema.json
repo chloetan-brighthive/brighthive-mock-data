@@ -1,0 +1,36 @@
+{
+  "$id": "https://example.com/courses.schema.json",
+  "title": "Course",
+  "type": "object",
+  "properties": {
+    "course_id": {
+      "type": "string",
+      "description": "Unique identifier for the course"
+    },
+    "course_name": {
+      "type": "string",
+      "description": "Name of the course"
+    },
+    "department": {
+      "type": "string",
+      "description": "Department offering the course"
+    },
+    "credits": {
+      "type": "integer",
+      "description": "Number of credits for the course",
+      "minimum": 1,
+      "maximum": 6
+    },
+    "level": {
+      "type": "string",
+      "description": "Academic level of the course",
+      "enum": ["Introductory", "Intermediate", "Advanced"]
+    },
+    "max_capacity": {
+      "type": "integer",
+      "description": "Maximum number of students allowed",
+      "minimum": 1
+    }
+  },
+  "required": ["course_id", "course_name", "department", "credits", "level"]
+} 

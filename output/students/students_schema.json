@@ -1,0 +1,38 @@
+{
+  "$id": "https://example.com/students.schema.json",
+  "title": "Student",
+  "type": "object",
+  "properties": {
+    "student_id": {
+      "type": "string",
+      "description": "Unique identifier for the student"
+    },
+    "first_name": {
+      "type": "string",
+      "description": "Student's first name"
+    },
+    "last_name": {
+      "type": "string",
+      "description": "Student's last name"
+    },
+    "date_of_birth": {
+      "type": "string",
+      "format": "date",
+      "description": "Student's date of birth"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "description": "Student's email address"
+    },
+    "major": {
+      "type": "string",
+      "description": "Student's declared major"
+    },
+    "entry_year": {
+      "type": "integer",
+      "description": "Year the student entered the institution"
+    }
+  },
+  "required": ["student_id", "first_name", "last_name", "date_of_birth", "email"]
+} 

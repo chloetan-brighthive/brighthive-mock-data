@@ -1,0 +1,39 @@
+{
+  "$id": "https://example.com/student_activities.schema.json",
+  "title": "Student Activities",
+  "type": "object",
+  "properties": {
+    "activity_id": {
+      "type": "string",
+      "description": "Unique identifier for the activity record"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "Reference to the student"
+    },
+    "activity_name": {
+      "type": "string",
+      "description": "Name of the extracurricular activity"
+    },
+    "activity_type": {
+      "type": "string",
+      "description": "Type of activity",
+      "enum": ["Sports", "Club", "Student Government", "Volunteer", "Research"]
+    },
+    "role": {
+      "type": "string",
+      "description": "Student's role in the activity"
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Start date of participation"
+    },
+    "hours_per_week": {
+      "type": "number",
+      "description": "Average hours spent per week",
+      "minimum": 0
+    }
+  },
+  "required": ["activity_id", "student_id", "activity_name", "activity_type", "role", "start_date", "hours_per_week"]
+} 

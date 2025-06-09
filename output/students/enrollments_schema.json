@@ -1,0 +1,35 @@
+{
+  "$id": "https://example.com/enrollments.schema.json",
+  "title": "Enrollment",
+  "type": "object",
+  "properties": {
+    "enrollment_id": {
+      "type": "string",
+      "description": "Unique identifier for the enrollment"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "Reference to the student"
+    },
+    "course_id": {
+      "type": "string",
+      "description": "Reference to the course"
+    },
+    "semester": {
+      "type": "string",
+      "description": "Semester of enrollment",
+      "enum": ["Fall 2023", "Spring 2024"]
+    },
+    "enrollment_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the student enrolled"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current enrollment status",
+      "enum": ["Active", "Dropped", "Completed"]
+    }
+  },
+  "required": ["enrollment_id", "student_id", "course_id", "semester", "enrollment_date", "status"]
+} 

@@ -1,0 +1,42 @@
+{
+  "$id": "https://example.com/academic_performance.schema.json",
+  "title": "Academic Performance",
+  "type": "object",
+  "properties": {
+    "performance_id": {
+      "type": "string",
+      "description": "Unique identifier for the performance record"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "Reference to the student"
+    },
+    "course_id": {
+      "type": "string",
+      "description": "Reference to the course"
+    },
+    "semester": {
+      "type": "string",
+      "description": "Semester of the performance record",
+      "enum": ["Fall 2023", "Spring 2024"]
+    },
+    "final_grade": {
+      "type": "string",
+      "description": "Final grade achieved",
+      "enum": ["A", "B", "C", "D", "F", "IP"]
+    },
+    "gpa_points": {
+      "type": "number",
+      "description": "GPA points equivalent",
+      "minimum": 0,
+      "maximum": 4
+    },
+    "attendance_rate": {
+      "type": "number",
+      "description": "Attendance rate as percentage",
+      "minimum": 0,
+      "maximum": 100
+    }
+  },
+  "required": ["performance_id", "student_id", "course_id", "semester", "final_grade", "gpa_points", "attendance_rate"]
+} 
