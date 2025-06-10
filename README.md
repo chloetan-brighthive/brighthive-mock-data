@@ -63,9 +63,6 @@ brighthive-mock-data/
 5. Verify the generated data:
    - Check the `output` directory for the new CSV file
 
-## Creating New Datasets
-
-To create a new dataset generator: decide on the requirements of your dataset.
 
 ## Available Datasets
 
